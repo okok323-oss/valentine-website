@@ -1,5 +1,5 @@
 /* =========================
-   RESET + BASE
+   RESET
 ========================= */
 * {
   margin: 0;
@@ -11,6 +11,9 @@ html, body {
   height: 100%;
 }
 
+/* =========================
+   BASE
+========================= */
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffd6e8;
@@ -21,7 +24,7 @@ body {
    ENTRY PAGE (index.html)
 ========================= */
 .page-center {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +71,7 @@ button:active {
 }
 
 /* =========================
-   WEEK PAGE (week.html)
+   WEEK PAGE CONTAINER
 ========================= */
 .container {
   padding: 2rem 1.5rem;
@@ -81,18 +84,78 @@ button:active {
   margin-bottom: 1.5rem;
 }
 
-.days {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* =========================
+   WEEK GRID (IMPORTANT)
+========================= */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.days a {
+/* =========================
+   DAY CARDS (FLOATING)
+========================= */
+.day-card {
   background: #fff7fb;
+  border-radius: 25px;
+  padding: 1.5rem 1rem;
+  text-align: center;
   text-decoration: none;
   color: #6b3e26;
-  padding: 15px;
-  border-radius: 20px;
-  font-size: 1rem;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-card .icon {
+  font-size: 2.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.day-card span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* =========================
+   CARD COLOR ACCENTS
+========================= */
+.rose {
+  background: linear-gradient(135deg, #ffe1ec, #fff7fb);
+}
+
+.propose {
+  background: linear-gradient(135deg, #ffe8f0, #fff7fb);
+}
+
+.chocolate {
+  background: linear-gradient(135deg, #f3e0d5, #fff7fb);
+}
+
+.teddy {
+  background: linear-gradient(135deg, #fff0d9, #fff7fb);
+}
+
+.promise {
+  background: linear-gradient(135deg, #e7f0ff, #fff7fb);
+}
+
+.hug {
+  background: linear-gradient(135deg, #ffecec, #fff7fb);
+}
+
+/* =========================
+   VALENTINE SPECIAL
+========================= */
+.valentine {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #ffccd5, #fff7fb);
+  padding: 2rem 1rem;
+}
+
+.valentine .icon {
+  font-size: 3rem;
 }
