@@ -1,33 +1,57 @@
+/* =========================
+   RESET + BASE
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffd6e8;
-  min-height: 100vh;
-}
-
-.container {
-  padding: 2rem 1.5rem;
-  text-align: center;
-}
-
-h1 {
-  font-family: 'Pacifico', cursive;
   color: #6b3e26;
+}
+
+/* =========================
+   ENTRY PAGE (index.html)
+========================= */
+.page-center {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.entry-card {
+  background: #fff7fb;
+  padding: 2.5rem 2rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.18);
+  max-width: 360px;
+  width: 100%;
+}
+
+.entry-card h1 {
+  font-family: 'Pacifico', cursive;
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
-p {
-  color: #6b3e26;
-  margin-bottom: 2rem;
+.entry-card p {
   font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
+/* =========================
+   BUTTON
+========================= */
 button {
   background: #6b3e26;
   color: white;
@@ -43,12 +67,24 @@ button:active {
   transform: scale(0.95);
 }
 
-/* Week page */
+/* =========================
+   WEEK PAGE (week.html)
+========================= */
+.container {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.container h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
 .days {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 1.5rem;
 }
 
 .days a {
@@ -59,32 +95,4 @@ button:active {
   border-radius: 20px;
   font-size: 1rem;
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-/* Center page content */
-.page-center {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-
-/* Floating entry card */
-.entry-card {
-  background: #fff7fb;
-  padding: 2.5rem 2rem;
-  border-radius: 30px;
-  text-align: center;
-  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.18);
-  max-width: 360px;
-  width: 100%;
-}
-
-/* Slight spacing polish */
-.entry-card h1 {
-  margin-bottom: 1rem;
-}
-
-.entry-card p {
-  margin-bottom: 2rem;
 }
