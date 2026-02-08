@@ -60,3 +60,31 @@ button:active {
   font-size: 1rem;
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
+/* Center page content */
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Floating entry card */
+.entry-card {
+  background: #fff7fb;
+  padding: 2.5rem 2rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.18);
+  max-width: 360px;
+  width: 100%;
+}
+
+/* Slight spacing polish */
+.entry-card h1 {
+  margin-bottom: 1rem;
+}
+
+.entry-card p {
+  margin-bottom: 2rem;
+}
