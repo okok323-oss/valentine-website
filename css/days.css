@@ -16,12 +16,33 @@ body{font-family:'Poppins',sans-serif; min-height:100vh; overflow:hidden; color:
 .glass-card p{font-size:1rem;line-height:1.7;}
 .glass-card a{display:inline-block;margin-top:2rem;background:#6b3e26;padding:10px 24px;border-radius:20px;font-size:0.9rem; color:white;}
 
-/* Fireflies */
-.firefly{position:absolute;width:7px;height:7px;background:rgba(255,255,200,1);border-radius:50%;box-shadow:0 0 15px rgba(255,255,200,1);animation:fly 14s infinite ease-in-out; z-index:1; pointer-events:none;}
-.firefly:nth-of-type(1){top:20%;left:15%;}
-.firefly:nth-of-type(2){top:60%;left:70%;animation-duration:18s;}
-.firefly:nth-of-type(3){top:80%;left:40%;animation-duration:22s;}
-@keyframes fly{0%{transform:translate(0,0);opacity:0.4;}50%{transform:translate(50px,-70px);opacity:1;}100%{transform:translate(-40px,60px);opacity:0.5;}}
+/* Fireflies - more visible and floating */
+.firefly {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 180, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 180, 0.9);
+  z-index: 3; /* make sure above Lottie */
+  pointer-events: none;
+}
+
+/* different starting positions for multiple fireflies */
+.firefly:nth-of-type(1){top:20%; left:15%;}
+.firefly:nth-of-type(2){top:60%; left:70%;}
+.firefly:nth-of-type(3){top:80%; left:40%;}
+.firefly:nth-of-type(4){top:35%; left:50%;}
+.firefly:nth-of-type(5){top:10%; left:80%;}
+
+/* smooth floating animation */
+@keyframes floatFirefly {
+  0% { transform: translate(0, 0); opacity:0.5; }
+  25% { transform: translate(20px, -30px); opacity:1; }
+  50% { transform: translate(-15px, 25px); opacity:0.7; }
+  75% { transform: translate(25px, 15px); opacity:1; }
+  100% { transform: translate(0, 0); opacity:0.5; }
+}
 
 /* Lottie backgrounds */
 .lottie-bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}

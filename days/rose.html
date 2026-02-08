@@ -15,6 +15,9 @@
 <div class="firefly"></div>
 <div class="firefly"></div>
 <div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
 
 <div class="day-center">
     <div class="glass-card">
@@ -37,3 +40,28 @@ gsap.to(".firefly",{duration:2,repeat:-1,yoyo:true,opacity:1,ease:"power1.inOut"
 </script>
 </body>
 </html>
+<script>
+  const fireflies = document.querySelectorAll(".firefly");
+  
+  fireflies.forEach((fly, i) => {
+    gsap.to(fly, {
+      duration: 6 + Math.random() * 4, // random speed
+      x: Math.random() * 100 - 50,    // random horizontal drift
+      y: Math.random() * 100 - 50,    // random vertical drift
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      delay: i * 0.5
+    });
+  
+    // subtle glow flicker
+    gsap.to(fly, {
+      duration: 1 + Math.random()*1.5,
+      opacity: 0.3 + Math.random()*0.7,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+  });
+  </script>
+  
