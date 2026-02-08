@@ -1,35 +1,35 @@
 body {
-  height: 100vh;
-  color: white;
-  overflow: hidden;
+  background: #fff7fb;
+  font-family: 'Poppins', sans-serif;
+}
+
+.day-card {
+  padding: 2rem;
+  margin: 2rem 1rem;
+  background: #ffd6e8;
+  border-radius: 25px;
   text-align: center;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #6b3e26;
+  margin-bottom: 1rem;
 }
 
-.day-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+p {
+  color: #6b3e26;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 a {
   display: inline-block;
-  margin-top: 30px;
-  color: white;
+  margin-top: 2rem;
   text-decoration: none;
+  color: white;
+  background: #6b3e26;
+  padding: 10px 25px;
+  border-radius: 20px;
 }
-
-/* COLOR THEMES */
-.rose { background: linear-gradient(120deg, #ff758c, #ff7eb3); }
-.propose { background: linear-gradient(120deg, #ff9966, #ff5e62); }
-.chocolate { background: linear-gradient(120deg, #603813, #b29f94); }
-.teddy { background: linear-gradient(120deg, #a18cd1, #fbc2eb); }
-.promise { background: linear-gradient(120deg, #43cea2, #185a9d); }
-.hug { background: linear-gradient(120deg, #f7971e, #ffd200); }
-.valentine { background: linear-gradient(120deg, #ff416c, #ff4b2b); }
