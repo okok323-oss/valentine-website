@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(135deg, #ffe1ec, #fff5fa);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #800040;
+  }
+  
+  .day {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .visual {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    animation: float 2s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+    50% { transform: translateY(-10px); }
+  }
+  
+  p {
+    color: #4a0033;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  

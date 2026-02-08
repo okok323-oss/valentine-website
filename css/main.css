@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #ffe1ec, #fff1f6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .landing {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .landing h1 {
+    color: #b30059;
+    margin-bottom: 15px;
+  }
+  
+  .intro {
+    color: #6b0039;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  button {
+    background: #ff8fb3;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .week {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .week h1 {
+    color: #b30059;
+    margin-bottom: 20px;
+  }
+  
+  .days a {
+    display: block;
+    margin: 10px auto;
+    background: rgba(255,255,255,0.7);
+    padding: 14px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #800040;
+    width: 90%;
+    max-width: 360px;
+  }
+  
