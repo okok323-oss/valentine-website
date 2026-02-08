@@ -1,35 +1,139 @@
+/* =========================
+   BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: #fff7fb;
   font-family: 'Poppins', sans-serif;
-}
-
-.day-card {
-  padding: 2rem;
-  margin: 2rem 1rem;
-  background: #ffd6e8;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-h1 {
-  font-family: 'Pacifico', cursive;
+  min-height: 100vh;
+  overflow: hidden;
   color: #6b3e26;
+}
+
+/* =========================
+   ROSE BACKGROUND
+========================= */
+.rose-bg {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 180, 200, 0.35), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(255, 160, 180, 0.25), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255, 200, 220, 0.35), transparent 50%),
+    linear-gradient(180deg, #ffe1ec, #ffd6e8);
+}
+
+/* =========================
+   CENTER CONTENT
+========================= */
+.day-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+.glass-card {
+  background: rgba(255, 247, 251, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 30px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+/* Illuminating border */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 32px;
+  background: linear-gradient(120deg, #ff9eb8, #ffd6e8, #ff9eb8);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* =========================
+   TEXT
+========================= */
+.glass-card h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.1rem;
   margin-bottom: 1rem;
 }
 
-p {
-  color: #6b3e26;
+.glass-card p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-a {
+/* =========================
+   BACK BUTTON
+========================= */
+.glass-card a {
   display: inline-block;
   margin-top: 2rem;
   text-decoration: none;
   color: white;
   background: #6b3e26;
-  padding: 10px 25px;
+  padding: 10px 24px;
   border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   FIREFLIES (CUTE INSECTS)
+========================= */
+.firefly {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 200, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 255, 200, 0.9);
+  animation: fly 12s infinite ease-in-out;
+}
+
+.firefly:nth-child(1) {
+  top: 30%;
+  left: 10%;
+}
+
+.firefly:nth-child(2) {
+  top: 60%;
+  left: 70%;
+  animation-duration: 15s;
+}
+
+.firefly:nth-child(3) {
+  top: 80%;
+  left: 40%;
+  animation-duration: 18s;
+}
+
+/* Floating animation */
+@keyframes fly {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(40px, -60px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-30px, 50px);
+    opacity: 0.4;
+  }
 }
