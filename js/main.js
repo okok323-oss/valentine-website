@@ -3,5 +3,7 @@ function startLove() {
   music.volume = 0.5;
   music.play();
 
-  window.location.href = "week.html";
+  setTimeout(() => {
+    window.location.href = "week.html";
+  }, 500);
 }

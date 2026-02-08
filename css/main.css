@@ -1,62 +1,54 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
   height: 100vh;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #ffd6e8, #ffeef5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
-}
-
-/* MAIN SECTION */
-.landing {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.landing h1 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-.intro {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
-
-/* BUTTON */
-button {
-  padding: 12px 28px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 30px;
-  background: #ff7aa2;
   color: white;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #ff4d6d;
+  font-size: 16px;
   cursor: pointer;
-  z-index: 20;
-  position: relative;
 }
 
-button:hover {
-  background: #ff5c8a;
+.week {
+  text-align: center;
+  padding-top: 80px;
 }
 
-/* SAFETY: NOTHING BLOCKS CLICKS */
-canvas,
-.background,
-.overlay,
-.hearts {
-  pointer-events: none;
+.days a {
+  display: block;
+  margin: 15px auto;
+  width: 220px;
+  padding: 12px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }

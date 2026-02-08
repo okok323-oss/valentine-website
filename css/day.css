@@ -1,38 +1,35 @@
 body {
-    background: linear-gradient(135deg, #ffe1ec, #fff5fa);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .back {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    text-decoration: none;
-    color: #800040;
-  }
-  
-  .day {
-    text-align: center;
-    padding: 30px;
-  }
-  
-  .visual {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    animation: float 2s infinite ease-in-out;
-  }
-  
-  @keyframes float {
-    50% { transform: translateY(-10px); }
-  }
-  
-  p {
-    color: #4a0033;
-    font-size: 1.05rem;
-    line-height: 1.6;
-  }
-  
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.day-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+  display: inline-block;
+  margin-top: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+/* COLOR THEMES */
+.rose { background: linear-gradient(120deg, #ff758c, #ff7eb3); }
+.propose { background: linear-gradient(120deg, #ff9966, #ff5e62); }
+.chocolate { background: linear-gradient(120deg, #603813, #b29f94); }
+.teddy { background: linear-gradient(120deg, #a18cd1, #fbc2eb); }
+.promise { background: linear-gradient(120deg, #43cea2, #185a9d); }
+.hug { background: linear-gradient(120deg, #f7971e, #ffd200); }
+.valentine { background: linear-gradient(120deg, #ff416c, #ff4b2b); }
